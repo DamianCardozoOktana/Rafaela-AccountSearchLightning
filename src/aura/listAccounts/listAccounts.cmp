@@ -1,29 +1,49 @@
+<!--c:listAccounts-->
 <aura:component >
-	<article class=" slds-m-around_small">
-        <div class="slds-card__body">
-            <table class="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
-                <thead>
-                    <tr class="slds-text-title_caps">
-                        <th scope="col">
-                            <div class="slds-truncate" title="Account Name">Account Name</div>
+    <aura:attribute name="accounts" type="Account[]" />
+    
+    <div class="slds-card__body">
+        <table class="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Name">Account Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Account Site">Account Site</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Billing State/Province">Billing State/Province</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Type">Type</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.accounts}" var="account">
+                    <tr>
+                        <th scope="row" data-label="Name">
+                            <a href="#"><div class="slds-truncate"><ui:outputText value="{!account.Name}"/></div></a>
                         </th>
-                        <th scope="col">
-                            <div class="slds-truncate" title="Account Site">Account Site</div>
-                        </th>
-                        <th scope="col">
-                            <div class="slds-truncate" title="Billing State/Province">Billing State/Province</div>
-                        </th>
-                        <th scope="col">
-                            <div class="slds-truncate" title="Phone">Phone</div>
-                        </th>
-                        <th scope="col">
-                            <div class="slds-truncate" title="Type">Type</div>
-                        </th>
+                        <td data-label="Site">
+                            <div class="slds-truncate"><ui:outputText value="{!account.Site}"/></div>
+                        </td>
+                        <td data-label="Billing State/Province">
+                            <div class="slds-truncate"><ui:outputText value="{!account.BillingAddress.state}"/></div>
+                        </td>
+                        <td data-label="Phone">
+                            <div class="slds-truncate"><ui:outputText value="{!account.Phone}"/></div>
+                        </td>
+                        <td data-label="Type">
+                            <div class="slds-truncate"><ui:outputText value="{!account.Type}"/></div>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-    </article>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
 </aura:component>

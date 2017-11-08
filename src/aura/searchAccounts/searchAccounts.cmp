@@ -1,5 +1,7 @@
-<aura:component >
+<!--c:searchAccounts-->
+<aura:component controller="ManageAccounts">
     <aura:attribute name='accountName' type='String' default='' />
+    <aura:attribute name="accounts" type="Account[]"/>
     
     <div class="slds-form-element slds-m-around_small">
         <label class="slds-form-element__label">Account Name</label>
@@ -8,5 +10,7 @@
         </div>
     </div>
     
-    <c:listAccounts />
+    <article class="toggle--table slds-m-around_small slds-m-top_x-large" aura:id="accounts--table">
+    	<c:listAccounts accounts="{!v.accounts}" />
+    </article>
 </aura:component>
