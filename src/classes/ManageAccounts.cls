@@ -7,4 +7,10 @@ public class ManageAccounts {
         return accounts;
     }
     
+    @AuraEnabled
+    public static List<Contact> getContactsAccount(Id accountId) {
+        List<Contact> contacts = [SELECT FirstName, LastName, Email, Phone FROM Contact WHERE AccountId = :accountId];
+        return contacts;
+    }
+    
 }

@@ -11,7 +11,12 @@
             $A.enqueueAction(action);
             
             var toggleTable = component.find("accounts--table");
-	        $A.util.toggleClass(toggleTable, "toggle--table");
+	        //$A.util.toggleClass(toggleTable, "toggle--table");
+	        $A.util.removeClass(toggleTable, 'toggle--table');
+        } else {
+            component.set("v.accounts", []);
+            var toggleTable = component.find("accounts--table");
+            $A.util.addClass(toggleTable, 'toggle--table');
         }
     }
 
