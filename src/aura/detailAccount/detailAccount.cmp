@@ -1,5 +1,5 @@
 <!-- c:detailAccount -->
-<aura:component controller="ManageAccounts" >
+<aura:component controller="ManageAccounts" implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="totalContacts" type="Integer" />
     <aura:attribute name="contacts" type="Contact[]" />
     <aura:handler event="c:detailAccountEvent" action="{!c.handleContactsAccount}"/>

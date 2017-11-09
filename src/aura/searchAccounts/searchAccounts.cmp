@@ -1,7 +1,6 @@
 <!--c:searchAccounts-->
-<aura:component controller="ManageAccounts">
+<aura:component controller="ManageAccounts" implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="accountName" type="String" default="" />
-    <aura:attribute name="accounts" type="Account[]"/>
     <aura:attribute name="offset" type="integer" />
     <aura:attribute name="next" type="boolean" />
     <aura:attribute name="prev" type="boolean" />
@@ -16,5 +15,5 @@
         </div>
     </div>
 
-	<c:listAccounts accounts="{!v.accounts}" accountName="{!v.accountName}" />
+	<c:listAccounts accountName="{!v.accountName}" />
 </aura:component>
