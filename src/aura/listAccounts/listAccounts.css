@@ -1,0 +1,4 @@
+.THIS .next--button, .THIS .prev--button {
+	border-radius: 50%;
+    padding: 0 8px;
+}

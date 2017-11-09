@@ -24,5 +24,9 @@
         <members>detailAccountEvent</members>
         <name>AuraDefinitionBundle</name>
     </types>
+    <types>
+        <members>searchAccountsEvent</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
     <version>37.0</version>
 </Package>

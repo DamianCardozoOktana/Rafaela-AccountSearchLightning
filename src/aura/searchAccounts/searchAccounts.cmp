@@ -1,16 +1,20 @@
 <!--c:searchAccounts-->
 <aura:component controller="ManageAccounts">
-    <aura:attribute name='accountName' type='String' default='' />
+    <aura:attribute name="accountName" type="String" default="" />
     <aura:attribute name="accounts" type="Account[]"/>
-    
+    <aura:attribute name="offset" type="integer" />
+    <aura:attribute name="next" type="boolean" />
+    <aura:attribute name="prev" type="boolean" />
+
+    <aura:registerEvent name="searchEvent" type="c:searchAccountsEvent"/>
+    <aura:registerEvent name="detailEvent" type="c:detailAccountEvent"/>
+
     <div class="slds-form-element slds-m-around_small">
         <label class="slds-form-element__label">Account Name</label>
         <div class="slds-form-element__control">
             <ui:inputText class="slds-input" aura:id="name" placeholder="Search Accounts" value='{!v.accountName}' keyup="{!c.searchAccounts}"/>
         </div>
     </div>
-    
-    <article class="toggle--table slds-m-around_small slds-m-top_x-large" aura:id="accounts--table">
-    	<c:listAccounts accounts="{!v.accounts}" />
-    </article>
+
+	<c:listAccounts accounts="{!v.accounts}" accountName="{!v.accountName}" />
 </aura:component>

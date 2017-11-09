@@ -1,9 +1,10 @@
+<!-- c:detailAccount -->
 <aura:component controller="ManageAccounts" >
     <aura:attribute name="totalContacts" type="Integer" />
     <aura:attribute name="contacts" type="Contact[]" />
     <aura:handler event="c:detailAccountEvent" action="{!c.handleContactsAccount}"/>
-    
-	<article class="slds-card slds-m-around_small slds-m-top_x-large slds-theme_shade toggle--detail" aura:id="account--detail">
+
+	<article class="slds-card slds-m-around_small slds-m-top_xx-large slds-theme_shade">
         <div class="slds-card__header slds-grid">
             <header class="slds-media slds-media_center slds-has-flexi-truncate">
                 <div class="slds-media__figure">
