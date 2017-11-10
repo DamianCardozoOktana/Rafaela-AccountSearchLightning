@@ -21,6 +21,10 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>callAPIComponent</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
         <members>detailAccountEvent</members>
         <name>AuraDefinitionBundle</name>
     </types>

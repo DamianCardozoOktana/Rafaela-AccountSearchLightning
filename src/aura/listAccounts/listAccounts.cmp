@@ -36,7 +36,7 @@
                     <aura:iteration items="{!v.accounts}" var="account">
                         <tr>
                             <th scope="row" data-label="Name">
-                                <a href="#" onclick="{!c.detailAccount}" data-accountId="{!account.Id}"><div class="slds-truncate"><ui:outputText value="{!account.Name}"/></div></a>
+                                <a onclick="{!c.detailAccount}" data-accountId="{!account.Id}"><div class="slds-truncate"><ui:outputText value="{!account.Name}"/></div></a>
                             </th>
                             <td data-label="Site">
                                 <div class="slds-truncate"><ui:outputText value="{!account.Site}"/></div>

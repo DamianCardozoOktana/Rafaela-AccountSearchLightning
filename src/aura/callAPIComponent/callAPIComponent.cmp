@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="beerName" type="String"/>
+    
+    <div class="slds-card slds-m-around_small slds-m-top_xx-large slds-theme_shade">
+        <div class="slds-m-around_small">
+            <p class="slds-page-header__title slds-truncate" title="Call to an external third-party">Call to an external third-party</p>
+            <button class="slds-button slds-button--brand slds-m-top_small" onclick="{!c.callToAction}">Call to action</button>  
+        </div>
+        
+        <h3 class="slds-section-title--divider">{!v.beerName }</h3>
+    </div>
+</aura:component>
