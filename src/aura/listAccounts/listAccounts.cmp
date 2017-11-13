@@ -1,5 +1,5 @@
 <!--c:listAccounts-->
-<aura:component controller="ManageAccounts" >
+<aura:component controller="ManageAccounts" implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="accountName" type="String" default=""/>
     <aura:attribute name="accounts" type="Account[]" />
     <aura:attribute name="offset" type="integer" />
